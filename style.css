@@ -1,0 +1,261 @@
+*{
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: #e9ecf8;
+    font-family: 'Inter', sans-serif;
+}
+
+ /* SECCION HEADER */
+.header{
+    width: 90%;
+    margin: auto;
+}
+
+.logo{
+    margin-top: 40px;
+}
+
+button{
+    cursor: pointer;
+}
+
+/* SECCION MAIN */
+
+.main{
+    /* width: 80.555%;
+    margin: auto 40px auto auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    min-height: calc(100vh - 91px - 72px);
+    align-items: end; */
+    margin: auto 40px auto auto;
+	width: 90%;
+	align-items: end;
+	min-height: calc(100vh - 80px - 56px);
+	display: grid;
+	padding: 1rem;
+	grid-template-columns: 2.5fr 1fr;
+	gap: 1rem;
+}
+
+/* SECCION IZQUIERDA */
+
+.seccionIzquierda{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* AREA DE TEXTO */
+
+.cajaDeTexto{
+    font-family: 'Inter', sans-serif;
+    width: 85%;
+    font-size: 32px;
+    color: #0A3871;
+    font-weight: 400;
+    line-height: 150%;
+    resize: none;
+    border: none;
+    outline: none;
+    background: none;
+    max-height: 350px;
+	min-height: 50px;
+    height: 210px;
+}
+
+.cajaDeTexto::placeholder{
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #0A3871;
+}
+
+.botones{
+    min-height: 80px;
+}
+
+/* MENSAJE DE ALERTA */
+
+.textoInfo{
+    color: #495057;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    gap: 10px;
+}
+
+/* BOTONES ENCRIPTAR/DESENCRIPTAR AGRUPADOS */
+
+.botonesIzquierda{
+    display: flex;
+	justify-content: space-evenly;
+	padding: .8rem;
+	flex-wrap: wrap;
+	gap: .8rem;
+}
+
+
+.botonDesencriptar,
+.botonEncriptar,
+.botonCopiar{
+    max-width: 328px;
+    min-width: 160px;
+    width: 45%;
+    height: 67px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #0A3871;
+    align-items: center;
+}
+
+/* BOTON ENCRIPTAR */
+
+.botonEncriptar{
+    color: white;
+    background-color: #0A3871;
+
+}
+
+/* BOTON DESENCRIPTAR */
+
+.botonDesencriptar{
+    color: #0A3871;
+    background-color: #D8DFE8;
+}
+
+/* SECCION DERECHA */
+
+.seccionDerecha{
+    background-color: white;
+    height: calc(100% + 60px);
+    border-radius: 32px;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+    box-shadow: 0px 24px 32px -8px #00000014;
+}
+
+.ajuste{
+    justify-content: space-between;
+}
+
+.imagenPersona{
+    min-width: 230px;
+	width: 50%;
+}
+
+.infoDerecha{
+    width: 100%;
+    background: none;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #343A40;
+    line-height: 120%;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.infoDerecha::placeholder{
+    color: #343A40;
+}
+
+.ajusteFinal{
+    height: auto;
+    pointer-events: all;
+    font-weight: 400;
+    text-align: left;
+    min-height: calc(100% - 67px - 32px);
+    overflow: auto;
+}
+
+.infoDerecha2{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #495057;
+    line-height: 150%;
+}
+
+.botonCopiar{
+    background-color: transparent;
+    width: 100%;
+    min-width: 100px;
+}
+.oculto{
+    display: none;
+}
+
+
+@media screen and (max-width: 768px){
+    .main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 65% auto;
+        margin: auto;
+    }
+
+    .cajaDeTexto{
+        max-height: 270px; 
+		font-size: 26px;
+    }
+
+    .seccionDerecha{
+        height: 100%;
+    }
+
+    .textoInfo,
+    .infoDerecha2{
+        font-size: 12px;
+    }
+
+    .infoDerecha{
+        font-size: 19px;
+    }
+
+    .seccionDerecha.ajusteFinal{
+        height: 100%;
+    }
+
+    .botonesIzquierda{
+        justify-content: center;
+    }
+
+    /* .botonEncriptar, 
+    .botonDesencriptar,
+    .botonCopiar{
+        width: 45%;
+    } */
+
+    .imagenPersona{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px){
+
+    .cajaDeTexto{
+        max-height: 200px;
+        font-size: 20px;
+    }
+
+    .botonEncriptar, 
+    .botonDesencriptar,
+    .botonCopiar{
+        width: 100%;
+        height: 50px;
+		border-radius: 19px;
+		font-size: 14px;
+    }
+}
